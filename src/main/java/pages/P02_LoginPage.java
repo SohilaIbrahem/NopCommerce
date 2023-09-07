@@ -19,6 +19,9 @@ public class P02_LoginPage {
     ////button[normalize-space()='Log in']
     private final By loginBtn = By.xpath("//button[text()='Log in']");
 
+    private  final By errorMesage = By.xpath("//div[@class=\"message-error validation-summary-errors\"]");
+    private final By logOutButton =By.xpath("//a[@class=\"ico-logout\"]");
+
 
     //TODO:
     public P02_LoginPage addUseremail(String Email) {
@@ -34,6 +37,12 @@ public class P02_LoginPage {
     public P02_LoginPage UserClickLogin() {
         driver.findElement(this.loginBtn).click();
         return this;
+    }
+    public boolean checkErrorMessage(){
+        return driver.findElement(errorMesage).getText().equals("Login was unsuccessful. Please correct the errors and try again.");
+    }
+    public boolean checkLogoutButton(){
+        return driver.findElement(logOutButton).isDisplayed();
     }
 
     //TODO:

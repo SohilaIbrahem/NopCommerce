@@ -2,6 +2,7 @@ package testCases;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.P01_RegistrationPage;
 import pages.P02_LoginPage;
@@ -26,8 +27,9 @@ public class TC02_LoginTest extends TestBase{
 
 
 
-    @Test
-    public void testLoginUser() {
+    // TODO: check login with valid email and password
+    @Test(priority = 1, description = "Check Login using Valid Email and Password")
+    public void testLoginUserWithValidData_P() {
 
         //loginPage = new P02_LoginPage(driver);
        // registration = new P01_RegistrationPage(driver);
@@ -39,7 +41,9 @@ public class TC02_LoginTest extends TestBase{
        // driver.findElement(By.xpath("//a[@class='ico-login']")).click();
 
         new PageBase(driver).UserClickOnLogin();
-        new P02_LoginPage(driver).addUseremail(EMAIL).addUseremail(PASSWORD).UserClickLogin();
+        new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        // TOdO: Assert if login successfully
+        Assert.assertTrue(new P02_LoginPage(driver).checkLogoutButton());
         //System.out.println(EMAIL + "     "+PASSWORD);
 
 
@@ -51,7 +55,29 @@ public class TC02_LoginTest extends TestBase{
         //loginPage.clickLoginBtn();
     }
 
-    @Test
-    public void checkLoginWithInvalidData(){}
+    @Test(priority = 2)
+    public void checkLoginWithInvalidEmailandValidPassword_N(){
+        EMAIL="sldksld@gmail.com";
+        new PageBase(driver).UserClickOnLogin();
+        new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
+    }
+    @Test(priority = 3)
+    public void checkLoginWithValidEmailandInvalidPassword_N(){
+        PASSWORD="sdfkdfnsdk";
+        new PageBase(driver).UserClickOnLogin();
+        new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
+
+    }
+    @Test(priority = 4)
+    public void checkLoginWithInvalidEmailandInvalidPassword_N(){
+        EMAIL="dslfsdnlf@gmail.com";
+        PASSWORD="dflksndfkln";
+        new PageBase(driver).UserClickOnLogin();
+        new P02_LoginPage(driver).addUseremail(EMAIL).addUseremail(PASSWORD).UserClickLogin();
+        Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
+
+    }
 
 }

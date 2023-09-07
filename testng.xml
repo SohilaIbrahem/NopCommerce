@@ -9,11 +9,12 @@
             <class name="testCases.TC01_RegistrationTest">
 
                 <methods>
-                    <include name="RegisterTest"/>
+                    <include name="RegisterTest_P"/>
                 </methods>
             </class>
         </classes>
     </test>
+
 
     <test name="Check login page">
         <parameter name="browser" value=""/>
@@ -22,7 +23,7 @@
             <class name="testCases.TC02_LoginTest">
 
                 <methods>
-                    <include name="testLoginUser"/>
+                    <include name="testLoginUserWithValidData_P"/>
                 </methods>
             </class>
         </classes>
@@ -81,7 +82,7 @@
     </test>-->
 
 
-    <test  name="Add to Cart">
+  <!--  <test  name="Add to Cart">
         <classes>
 
             <class name="testCases.TC08_addToCartTest">
@@ -91,7 +92,7 @@
                 </methods>
             </class>
         </classes>
-    </test>
+    </test>-->
 
 
 

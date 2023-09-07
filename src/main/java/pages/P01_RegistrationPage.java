@@ -27,6 +27,8 @@ public class P01_RegistrationPage {
     private final By confPassword = By.xpath("//input[@id='ConfirmPassword']");
     private By registerBtn = By.xpath("//button[@id='register-button']");
     private final By confMessage = By.xpath("//div[@class=\"result\"]");
+    private final By errorMessage = By.xpath("//div[@class=\"message-error validation-summary-errors\"]");
+    private final By sucsessMessage =By.xpath("//div[@class=\"result\"]");
 
     public P01_RegistrationPage addUserGenderFemale() {
         driver.findElement(this.genderFemale).click();
@@ -87,6 +89,18 @@ public class P01_RegistrationPage {
        return driver.findElement(this.confMessage).getText().equals("Your registration completed");
 
     }
+
+    public boolean ErrorMessage() {
+        return driver.findElement(this.errorMessage).getText().equals("Current customer is already registered");
+
+    }
+    public boolean SuccessMessage() {
+        return driver.findElement(this.sucsessMessage).getText().equals("Your registration completed");
+
+    }
+
+
+
 
 
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NopCommerceWebsite">
+
+    <parameter name="browser" value=""/>
+    <test  name="Check Registration With valid data">
+        <classes>
+            <class name="testCases.TC01_RegistrationTest">
+                <methods>
+                    <include name="RegisterTest_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test  name="Check Registration With Duplicated data">
+        <classes>
+
+            <class name="testCases.TC01_RegistrationTest">
+
+                <methods>
+                    <include name="RegisterTest_withDuplicatedData_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

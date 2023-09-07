@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NopCommerceWebsite">
+
+    <parameter name="browser" value=""/>
+    <test name="Check Login with Invalid Email and Valid Password">
+        <classes>
+            <class name="testCases.TC02_LoginTest">
+                <methods>
+                    <include name="checkLoginWithInvalidEmailandValidPassword_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Login with Valid Email and Invalid Password">
+        <classes>
+            <class name="testCases.TC02_LoginTest">
+                <methods>
+                    <include name="checkLoginWithValidEmailandInvalidPassword_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Login with Invalid Email and Invalid Password">
+        <classes>
+            <class name="testCases.TC02_LoginTest">
+                <methods>
+                    <include name="checkLoginWithInvalidEmailandInvalidPassword_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
