@@ -1,13 +1,17 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class P08_AddToCart {
 
+    public JavascriptExecutor javaececut ;
+
     private WebDriver driver;
     public P08_AddToCart (WebDriver driver)
     {
+
         this.driver=driver;
     }
 
@@ -22,6 +26,13 @@ public class P08_AddToCart {
 
     private By addCamToCart =By.id("add-to-cart-button-14");
     private By addToCompare = By.xpath("//button[normalize-space()='Add to compare list']");
+
+    public void scrollToBottom()
+
+    {
+
+        javaececut.executeScript("scrollBy(0,2500)");
+    }
 
     public P08_AddToCart SelectElectronic() {
         driver.findElement(this.electronic).click();
@@ -56,5 +67,7 @@ public class P08_AddToCart {
     public P08_AddToCart ClickOnAddToCompare() {
         driver.findElement(this.addToCompare).click();
         return this;
+
+
     }
 }

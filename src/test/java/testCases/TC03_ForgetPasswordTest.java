@@ -20,10 +20,9 @@ public class TC03_ForgetPasswordTest extends TestBase{
 //        new P01_RegistrationPage(driver).addUserGenderFemale().enterFirstName(FIRSTNAME).enterLastName(LASTNAME).
 //                selectDay().selectMonth().selectYear().
 //                enterEmail(EMAIL).enterPassword(PASSWORD).enterConfPassword(PASSWORD).getRegisterBtn();
+        //driver.findElement(By.xpath("//a[@class='ico-login']")).click();
 
-//    driver.findElement(By.xpath("//a[@class='ico-login']")).click();
-
-        new P03_ForgetPassword(driver).selectLoginBtn().ClickForget().sendEmail(EMAIL).clickForgetBtn();
+        new P03_ForgetPassword(driver).selectLoginBtn().clickForgetPass().sendEmail(EMAIL).UserClickRecoverBtn();
 
         //driver.findElement(By.xpath("//a[normalize-space()='Forgot password?']")).click();
 

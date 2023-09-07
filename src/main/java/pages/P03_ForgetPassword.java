@@ -18,23 +18,21 @@ public class P03_ForgetPassword {
 
     private By loginBtn = By.xpath("//a[@class='ico-login']");
 
-    private By recoverBtn = By.xpath("//a[normalize-space()='Forgot password?']");
+    private By forgetPass = By.xpath("//a[normalize-space()='Forgot password?']");
 
 
     private By email = By.xpath("//input[@id='Email']");
 
 
+
+    private By recoverBtn =By.xpath("//button[@name='send-email']");
+
     public P03_ForgetPassword selectLoginBtn() {
         driver.findElement(this.loginBtn).click();
         return this;
     }
-
-
-
-    private By clickForget = By.xpath("//a[normalize-space()='Forgot password?']");
-
-    public P03_ForgetPassword  ClickForget() {
-        driver.findElement(this.clickForget).click();
+    public P03_ForgetPassword clickForgetPass() {
+        driver.findElement(this.forgetPass).click();
         return this;
     }
 
@@ -43,11 +41,17 @@ public class P03_ForgetPassword {
         return this;
     }
 
-
-    public P03_ForgetPassword clickForgetBtn() {
+    public P03_ForgetPassword UserClickRecoverBtn() {
         driver.findElement(this.recoverBtn).click();
         return this;
     }
+
+
+
+
+
+
+
 
 
 

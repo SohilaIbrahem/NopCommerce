@@ -11,11 +11,13 @@ public class TC07_SearchTest extends TestBase {
    // String[] items = {"Computers", "Electronics", "Apparel", "Digital downloads", "Books", "Jewelry", "Gift Cards"};
    // String randomItem = getRandomItem(items);
 
-    String item = "Computers";
+    String productName = "";
     @Test
     public void searchTest()
     {
-    new P07_Search(driver).SearchField(item).clickSearchButton();
+
+        new P07_Search(driver).SearchField(productName).clickSearchButton();
+
     }
 
 }

@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pages.P01_RegistrationPage;
 import pages.P02_LoginPage;
 import pages.P01_RegistrationPage.*;
+import pages.PageBase;
 
 import static testCases.TC01_RegistrationTest.*;
 
@@ -35,9 +36,11 @@ public class TC02_LoginTest extends TestBase{
 //                selectDay().selectMonth().selectYear().
 //                enterEmail(EMAIL).enterPassword(PASSWORD).enterConfPassword(PASSWORD).getRegisterBtn();
 
-        driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+       // driver.findElement(By.xpath("//a[@class='ico-login']")).click();
 
+        new PageBase(driver).UserClickOnLogin();
         new P02_LoginPage(driver).addUseremail(EMAIL).addUseremail(PASSWORD).UserClickLogin();
+        //System.out.println(EMAIL + "     "+PASSWORD);
 
 
        // driver.navigate().back();

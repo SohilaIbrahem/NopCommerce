@@ -28,7 +28,7 @@
         </classes>
     </test>
 
-        <test  name="Check Forget password">
+       <!-- <test  name="Check Forget password">
             <classes>
 
                 <class name="testCases.TC03_ForgetPasswordTest">
@@ -38,57 +38,60 @@
                     </methods>
                 </class>
             </classes>
-        </test>
+        </test>-->
 
-<!--    <test  name="Select Currency ">-->
-<!--        <classes>-->
+    <!--
+    <test  name="Select Currency ">
+        <classes>
 
-<!--            <class name="testCases.TC04_CurrencyPageTest">-->
+            <class name="testCases.TC04_CurrencyPageTest">
 
-<!--                <methods>-->
-<!--                    <include name="CurrencyPageTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test  name="Change Password ">-->
-<!--        <classes>-->
-
-<!--            <class name="testCases.TC06_changePasswordTest">-->
-
-<!--                <methods>-->
-<!--                    <include name="changePasswordTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test  name="Home page menu Bar">-->
-<!--        <classes>-->
-
-<!--            <class name="testCases.TC00_HomePageHoverMenuTest">-->
-
-<!--                <methods>-->
-<!--                    <include name="HomePageHoverMenuTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+                <methods>
+                    <include name="CurrencyPageTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+-->
 
 
+   <!-- <test  name="Change Password ">
+        <classes>
 
-<!--    <test  name="Add to Cart">-->
-<!--        <classes>-->
+            <class name="testCases.TC06_changePasswordTest">
 
-<!--            <class name="testCases.TC08_addToCartTest">-->
+                <methods>
+                    <include name="changePasswordTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
 
-<!--                <methods>-->
-<!--                    <include name="addToCartTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+
+    <!--<test  name="Home page menu Bar">
+        <classes>
+
+            <class name="testCases.TC00_HomePageHoverMenuTest">
+
+                <methods>
+                    <include name="HomePageHoverMenuTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+
+
+    <test  name="Add to Cart">
+        <classes>
+
+            <class name="testCases.TC08_addToCartTest">
+
+                <methods>
+                    <include name="addToCartTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
 

@@ -36,8 +36,8 @@ public class P06_changePassworg {
         return this;
     }
 
-    public P06_changePassworg enterNewPass(String NPass) {
-        driver.findElement(this.newPass).sendKeys(NPass);
+    public P06_changePassworg enterNewPass(String NewPass) {
+        driver.findElement(this.newPass).sendKeys(NewPass);
         return this;
     }
 

@@ -10,22 +10,23 @@ public class P01_RegistrationPage {
 
     private WebDriver driver;
     Select select;
-    public P01_RegistrationPage(WebDriver driver)
-    {
-        this.driver=driver;
+
+    public P01_RegistrationPage(WebDriver driver) {
+        this.driver = driver;
     }
 
 
     private final By genderFemale = By.xpath("//input[@value='F']");
     private final By firstName = By.xpath("//input[@id='FirstName']");
     private final By lastName = By.xpath("//input[@id='LastName']");
-    private final By day =(By.xpath("//select[@name='DateOfBirthDay']"));
+    private final By day = (By.xpath("//select[@name='DateOfBirthDay']"));
     private final By month = By.xpath("//select[@name='DateOfBirthMonth']");
     private final By year = By.xpath("//select[@name='DateOfBirthYear']");
     private final By email = By.xpath("//input[@id='Email']");
     private final By password = By.xpath("//input[@id='Password']");
-    private final By confPassword= By.xpath("//input[@id='ConfirmPassword']");
+    private final By confPassword = By.xpath("//input[@id='ConfirmPassword']");
     private By registerBtn = By.xpath("//button[@id='register-button']");
+    private final By confMessage = By.xpath("//div[@class=\"result\"]");
 
     public P01_RegistrationPage addUserGenderFemale() {
         driver.findElement(this.genderFemale).click();
@@ -43,20 +44,20 @@ public class P01_RegistrationPage {
     }
 
     public P01_RegistrationPage selectDay() {
-        select=new Select(driver.findElement(this.day));
-        select.selectByIndex(utlity.generateRandomNumber(1,30));
+        select = new Select(driver.findElement(this.day));
+        select.selectByIndex(utlity.generateRandomNumber(1, 30));
         return this;
     }
 
     public P01_RegistrationPage selectMonth() {
         select = new Select(driver.findElement(this.month));
-        select.selectByIndex(utlity.generateRandomNumber(1,12));
+        select.selectByIndex(utlity.generateRandomNumber(1, 12));
         return this;
     }
 
     public P01_RegistrationPage selectYear() {
-        select=new Select(driver.findElement(this.year));
-        select.selectByIndex(utlity.generateRandomNumber(1,20));
+        select = new Select(driver.findElement(this.year));
+        select.selectByIndex(utlity.generateRandomNumber(1, 20));
         return this;
     }
 
@@ -65,7 +66,7 @@ public class P01_RegistrationPage {
         return this;
     }
 
-    public P01_RegistrationPage enterPassword( String Pssword) {
+    public P01_RegistrationPage enterPassword(String Pssword) {
         driver.findElement(this.password).sendKeys(Pssword);
         return this;
     }
@@ -81,6 +82,14 @@ public class P01_RegistrationPage {
     }
 
 
+    //TODO : Assertion method
+    public boolean confRegisterSuccessfully() {
+       return driver.findElement(this.confMessage).getText().equals("Your registration completed");
+
+    }
+
+
+}
 
 /*
     public void clickGender()
@@ -148,4 +157,4 @@ public class P01_RegistrationPage {
 
 */
 
-}
+
