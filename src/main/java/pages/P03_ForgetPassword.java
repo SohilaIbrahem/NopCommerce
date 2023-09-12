@@ -16,21 +16,12 @@ public class P03_ForgetPassword {
     }
 
 
-    private By loginBtn = By.xpath("//a[@class='ico-login']");
+    private final By forgetPass = By.xpath("//a[normalize-space()='Forgot password?']");
 
-    private By forgetPass = By.xpath("//a[normalize-space()='Forgot password?']");
+    private final By email = By.xpath("//input[@id='Email']");
 
-
-    private By email = By.xpath("//input[@id='Email']");
-
-
-
-    private By recoverBtn =By.xpath("//button[@name='send-email']");
-
-    public P03_ForgetPassword selectLoginBtn() {
-        driver.findElement(this.loginBtn).click();
-        return this;
-    }
+    private final By recoverBtn =By.xpath("//button[@name='send-email']");
+    private final By ConfermationMessage=By.xpath("//p[contains(text(),'Email with instructions has been sent to you.')]");
     public P03_ForgetPassword clickForgetPass() {
         driver.findElement(this.forgetPass).click();
         return this;
@@ -45,16 +36,9 @@ public class P03_ForgetPassword {
         driver.findElement(this.recoverBtn).click();
         return this;
     }
-
-
-
-
-
-
-
-
-
-
-
+    public boolean CheckConfirmationMessage()
+    {
+        return driver.findElement(this.ConfermationMessage).isDisplayed();
+    }
 
 }

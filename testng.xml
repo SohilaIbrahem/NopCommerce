@@ -3,18 +3,16 @@
 <suite name="NopCommerceWebsite">
 
     <parameter name="browser" value=""/>
-    <test  name="Check Registration With valid data">
-        <classes>
-            
-            <class name="testCases.TC01_RegistrationTest">
 
+   <!-- <test  name="Check Registration With valid data">
+        <classes>
+            <class name="testCases.TC01_RegistrationTest">
                 <methods>
                     <include name="RegisterTest_P"/>
                 </methods>
             </class>
         </classes>
     </test>
-
 
     <test name="Check login page">
         <parameter name="browser" value=""/>
@@ -28,24 +26,23 @@
             </class>
         </classes>
     </test>
+-->
 
-       <!-- <test  name="Check Forget password">
+        <test  name="Check Forget password">
             <classes>
-
                 <class name="testCases.TC03_ForgetPasswordTest">
-
                     <methods>
                         <include name="ForgetPasswordTest"/>
                     </methods>
                 </class>
             </classes>
-        </test>-->
+        </test>
 
     <!--
     <test  name="Select Currency ">
         <classes>
 
-            <class name="testCases.TC04_CurrencyPageTest">
+            <class name="testCases.TC06_CurrencyPageTest">
 
                 <methods>
                     <include name="CurrencyPageTest"/>
@@ -59,7 +56,7 @@
    <!-- <test  name="Change Password ">
         <classes>
 
-            <class name="testCases.TC06_changePasswordTest">
+            <class name="testCases.TC05_changePasswordTest">
 
                 <methods>
                     <include name="changePasswordTest"/>
@@ -85,7 +82,7 @@
   <!--  <test  name="Add to Cart">
         <classes>
 
-            <class name="testCases.TC08_addToCartTest">
+            <class name="testCases.TC09_addToWishlistTest">
 
                 <methods>
                     <include name="addToCartTest"/>
@@ -95,7 +92,18 @@
     </test>-->
 
 
+  <!--  <test name="Check That user Can Add Product to Cart">
+        <parameter name="browser" value=""/>
+        <classes>
 
+            <class name="testCases.TC10_AddToShoppingCartTest">
+
+                <methods>
+                    <include name="addToCartTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
 
 
 

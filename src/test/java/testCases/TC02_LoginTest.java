@@ -8,6 +8,7 @@ import pages.P01_RegistrationPage;
 import pages.P02_LoginPage;
 import pages.P01_RegistrationPage.*;
 import pages.PageBase;
+import utilities.utlity;
 
 import static testCases.TC01_RegistrationTest.*;
 
@@ -31,28 +32,13 @@ public class TC02_LoginTest extends TestBase{
     @Test(priority = 1, description = "Check Login using Valid Email and Password")
     public void testLoginUserWithValidData_P() {
 
-        //loginPage = new P02_LoginPage(driver);
-       // registration = new P01_RegistrationPage(driver);
-
-//        new P01_RegistrationPage(driver).addUserGenderFemale().enterFirstName(FIRSTNAME).enterLastName(LASTNAME).
-//                selectDay().selectMonth().selectYear().
-//                enterEmail(EMAIL).enterPassword(PASSWORD).enterConfPassword(PASSWORD).getRegisterBtn();
-
-       // driver.findElement(By.xpath("//a[@class='ico-login']")).click();
-
         new PageBase(driver).UserClickOnLogin();
         new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"Login_P");
         // TOdO: Assert if login successfully
         Assert.assertTrue(new P02_LoginPage(driver).checkLogoutButton());
-        //System.out.println(EMAIL + "     "+PASSWORD);
 
-
-       // driver.navigate().back();
-
-
-        // loginPage.enterEmail(EMAIL);
-        //loginPage.enterPass(PASSWORD);
-        //loginPage.clickLoginBtn();
     }
 
     @Test(priority = 2)
@@ -60,6 +46,8 @@ public class TC02_LoginTest extends TestBase{
         EMAIL="sldksld@gmail.com";
         new PageBase(driver).UserClickOnLogin();
         new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"Login_N");
         Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
     }
     @Test(priority = 3)
@@ -67,6 +55,8 @@ public class TC02_LoginTest extends TestBase{
         PASSWORD="sdfkdfnsdk";
         new PageBase(driver).UserClickOnLogin();
         new P02_LoginPage(driver).addUseremail(EMAIL).addUserPasswod(PASSWORD).UserClickLogin();
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"Login_N");
         Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
 
     }
@@ -76,6 +66,8 @@ public class TC02_LoginTest extends TestBase{
         PASSWORD="dflksndfkln";
         new PageBase(driver).UserClickOnLogin();
         new P02_LoginPage(driver).addUseremail(EMAIL).addUseremail(PASSWORD).UserClickLogin();
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"Login_N");
         Assert.assertTrue(new P02_LoginPage(driver).checkErrorMessage());
 
     }

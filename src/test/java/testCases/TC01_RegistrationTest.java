@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.P01_RegistrationPage;
 import pages.PageBase;
+import utilities.utlity;
 
 public class TC01_RegistrationTest extends TestBase {
 
@@ -31,8 +32,12 @@ public class TC01_RegistrationTest extends TestBase {
         new P01_RegistrationPage(driver).addUserGenderFemale().enterFirstName(FIRSTNAME).enterLastName(LASTNAME).
                 selectDay().selectMonth().selectYear().
                 enterEmail(EMAIL).enterPassword(PASSWORD).enterConfPassword(PASSWORD).getRegisterBtn();
-        //TODO:Asseert result
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"register");
+
+        //TODO:Assert result
         Assert.assertTrue(new P01_RegistrationPage(driver).confRegisterSuccessfully());
+
 
 
     }
@@ -42,7 +47,8 @@ public class TC01_RegistrationTest extends TestBase {
         new PageBase(driver).UserClickOnRegister();
         new P01_RegistrationPage(driver).addUserGenderFemale().enterFirstName(FIRSTNAME).enterLastName(LASTNAME).
                 enterEmail(EMAIL).enterPassword(PASSWORD).enterConfPassword(PASSWORD).getRegisterBtn();
-
+        //TODO : take screenshot
+        utlity.captureScreenshot(driver,"duplicated_register");
 
         Assert.assertFalse(new P01_RegistrationPage(driver).ErrorMessage());
 
@@ -51,6 +57,19 @@ public class TC01_RegistrationTest extends TestBase {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // registration = new P01_RegistrationPage(driver);

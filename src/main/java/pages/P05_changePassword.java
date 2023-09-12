@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P06_changePassworg {
+public class P05_changePassword {
 
 
     private WebDriver driver;
 
-    public P06_changePassworg(WebDriver driver)
+    public P05_changePassword(WebDriver driver)
     {
         this.driver=driver;
     }
@@ -19,34 +19,32 @@ public class P06_changePassworg {
     private By newPass = By.id("NewPassword");
     private By cofNewPass = By.id("ConfirmNewPassword");
 
-
-
     private By changePassBtn = By.xpath("//button[normalize-space()='Change password']");
 
 
 
 
-    public P06_changePassworg userClickChangePass() {
+    public P05_changePassword userClickChangePass() {
         driver.findElement(this.clickChangePass).click();
         return this;
     }
 
-    public P06_changePassworg enterOldPass(String OPass) {
+    public P05_changePassword enterOldPass(String OPass) {
         driver.findElement(this.oldPass).sendKeys(OPass);
         return this;
     }
 
-    public P06_changePassworg enterNewPass(String NewPass) {
+    public P05_changePassword enterNewPass(String NewPass) {
         driver.findElement(this.newPass).sendKeys(NewPass);
         return this;
     }
 
-    public P06_changePassworg enterCofNewPass(String CNPass) {
+    public P05_changePassword enterCofNewPass(String CNPass) {
         driver.findElement(this.cofNewPass).sendKeys(CNPass);
         return this;
     }
 
-    public P06_changePassworg userClickOnChangePassBtn() {
+    public P05_changePassword userClickOnChangePassBtn() {
         driver.findElement(this.changePassBtn).click();
         return this;
     }

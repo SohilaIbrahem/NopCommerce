@@ -44,6 +44,29 @@ public class P02_LoginPage {
     public boolean checkLogoutButton(){
         return driver.findElement(logOutButton).isDisplayed();
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //TODO:
 /*
@@ -71,4 +94,4 @@ public class P02_LoginPage {
 */
 
 
-}
+

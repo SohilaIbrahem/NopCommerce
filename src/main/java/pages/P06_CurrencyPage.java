@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import utilities.utlity;
 
-public class P04_CurrencyPage {
+public class P06_CurrencyPage {
 
 
  Select select;
     private WebDriver driver;
 
-    public P04_CurrencyPage(WebDriver driver)
+    public P06_CurrencyPage(WebDriver driver)
     {
 
         this.driver=driver;
@@ -20,7 +20,7 @@ public class P04_CurrencyPage {
 
     private By currencyDropdwn = By.id("customerCurrency");
 
-    public P04_CurrencyPage SelectCurrencyDropdwn() {
+    public P06_CurrencyPage SelectCurrencyDropdwn() {
         select = new Select(driver.findElement(this.currencyDropdwn));
         select.selectByIndex(utlity.generateRandomNumber(1,2));
 
