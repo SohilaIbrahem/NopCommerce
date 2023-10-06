@@ -16,13 +16,13 @@ public class TC03_ForgetPasswordTest extends TestBase{
 
 
     @Test
-    public void Test()
+    public void forgetPasswordTest()
     {
 
         new PageBase(driver).UserClickOnLogin();
         new P03_ForgetPassword(driver).clickForgetPass().sendEmail(EMAIL).UserClickRecoverBtn();
         Assert.assertTrue(new P03_ForgetPassword(driver).CheckConfirmationMessage());
-        //TODO : take screenshot
+        //TODO: take screenshot
         utlity.captureScreenshot(driver,"ForgetPassword");
 
     }

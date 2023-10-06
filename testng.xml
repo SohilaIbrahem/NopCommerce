@@ -4,7 +4,7 @@
 
     <parameter name="browser" value=""/>
 
-   <!-- <test  name="Check Registration With valid data">
+    <test  name="Check Registration With valid data">
         <classes>
             <class name="testCases.TC01_RegistrationTest">
                 <methods>
@@ -17,94 +17,69 @@
     <test name="Check login page">
         <parameter name="browser" value=""/>
         <classes>
-
             <class name="testCases.TC02_LoginTest">
-
                 <methods>
                     <include name="testLoginUserWithValidData_P"/>
                 </methods>
             </class>
         </classes>
     </test>
--->
 
-        <test  name="Check Forget password">
-            <classes>
-                <class name="testCases.TC03_ForgetPasswordTest">
-                    <methods>
-                        <include name="ForgetPasswordTest"/>
-                    </methods>
-                </class>
-            </classes>
-        </test>
-
-    <!--
-    <test  name="Select Currency ">
+    <test name="Forget password">
+        <parameter name="browser" value=""/>
         <classes>
-
-            <class name="testCases.TC06_CurrencyPageTest">
-
+            <class name="testCases.TC03_ForgetPasswordTest">
                 <methods>
-                    <include name="CurrencyPageTest"/>
+                    <include name="forgetPasswordTest"/>
                 </methods>
             </class>
         </classes>
     </test>
--->
 
-
-   <!-- <test  name="Change Password ">
+    <test name="Search For any product">
+        <parameter name="browser" value=""/>
         <classes>
-
-            <class name="testCases.TC05_changePasswordTest">
-
+            <class name="testCases.TC07_SearchTest">
                 <methods>
-                    <include name="changePasswordTest"/>
+                    <include name="searchTest"/>
                 </methods>
             </class>
         </classes>
-    </test>-->
+    </test>
 
-
-    <!--<test  name="Home page menu Bar">
+    <test name="Add to Wishlist">
+        <parameter name="browser" value=""/>
         <classes>
-
-            <class name="testCases.TC00_HomePageHoverMenuTest">
-
-                <methods>
-                    <include name="HomePageHoverMenuTest"/>
-                </methods>
-            </class>
-        </classes>
-    </test>-->
-
-
-  <!--  <test  name="Add to Cart">
-        <classes>
-
             <class name="testCases.TC09_addToWishlistTest">
-
                 <methods>
-                    <include name="addToCartTest"/>
+                    <include name="addToWishlistTest"/>
                 </methods>
             </class>
         </classes>
-    </test>-->
+    </test>
 
+    <test name="Add to Compare list">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testCases.TC11_AddProductsToComparelistTest">
+                <methods>
+                    <include name="UserCanAddProductToCompareList"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-  <!--  <test name="Check That user Can Add Product to Cart">
+    <test name="Create Success Order">
         <parameter name="browser" value=""/>
         <classes>
 
-            <class name="testCases.TC10_AddToShoppingCartTest">
+            <class name="testCases.TC12_CreateSuccessfulOrderTest">
 
                 <methods>
-                    <include name="addToCartTest"/>
+                    <include name="CreateOreder"/>
                 </methods>
             </class>
         </classes>
-    </test>-->
-
-
+    </test>
 
 </suite>

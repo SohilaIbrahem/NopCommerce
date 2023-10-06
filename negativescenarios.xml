@@ -3,6 +3,7 @@
 <suite name="NopCommerceWebsite">
 
     <parameter name="browser" value=""/>
+
     <test name="Check Login with Invalid Email and Valid Password">
         <classes>
             <class name="testCases.TC02_LoginTest">
@@ -12,6 +13,7 @@
             </class>
         </classes>
     </test>
+
     <test name="Check Login with Valid Email and Invalid Password">
         <classes>
             <class name="testCases.TC02_LoginTest">
@@ -21,6 +23,7 @@
             </class>
         </classes>
     </test>
+
     <test name="Check Login with Invalid Email and Invalid Password">
         <classes>
             <class name="testCases.TC02_LoginTest">

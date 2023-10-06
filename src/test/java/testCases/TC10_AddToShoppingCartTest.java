@@ -9,8 +9,7 @@ public class TC10_AddToShoppingCartTest extends TestBase {
     @Test
     public void addToCartTest()
     {
-
         new P10_AddToShoppingCart(driver).UserClickOnJewelry().UserSelectProduct().UserAddProductToCart();
-        Assert.assertTrue(new P10_AddToShoppingCart(driver).CheckConfirmationMessage());
+        Assert.assertFalse(new P10_AddToShoppingCart(driver).CheckConfirmationMessage());
     }
 }

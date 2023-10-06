@@ -15,7 +15,6 @@ public class P03_ForgetPassword {
         this.driver=driver;
     }
 
-
     private final By forgetPass = By.xpath("//a[normalize-space()='Forgot password?']");
 
     private final By email = By.xpath("//input[@id='Email']");
@@ -40,5 +39,4 @@ public class P03_ForgetPassword {
     {
         return driver.findElement(this.ConfermationMessage).isDisplayed();
     }
-
 }

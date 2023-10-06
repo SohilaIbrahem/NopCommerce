@@ -28,7 +28,6 @@ public class P01_RegistrationPage {
     private By registerBtn = By.xpath("//button[@id='register-button']");
     private final By confMessage = By.xpath("//div[@class=\"result\"]");
     private final By errorMessage = By.xpath("//div[@class=\"message-error validation-summary-errors\"]");
-    private final By sucsessMessage =By.xpath("//div[@class=\"result\"]");
 
     public P01_RegistrationPage addUserGenderFemale() {
         driver.findElement(this.genderFemale).click();
@@ -83,24 +82,14 @@ public class P01_RegistrationPage {
         return this;
     }
 
-
     //TODO : Assertion method
     public boolean confRegisterSuccessfully() {
-       return driver.findElement(this.confMessage).getText().equals("Your registration completed");
+        return driver.findElement(this.confMessage).getText().equals("Your registration completed");
 
     }
 
     public boolean ErrorMessage() {
-        return driver.findElement(this.errorMessage).getText().equals("Current customer is already registered");
+        return driver.findElement(this.errorMessage).getText().equals("The specified email already exists");
 
     }
-    public boolean SuccessMessage() {
-        return driver.findElement(this.sucsessMessage).getText().equals("Your registration completed");
-
-    }
-
-
-
-
-
 }

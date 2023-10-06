@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class P05_changePassword {
 
-
     private WebDriver driver;
 
     public P05_changePassword(WebDriver driver)
@@ -13,15 +12,12 @@ public class P05_changePassword {
         this.driver=driver;
     }
 
-
     private By clickChangePass = By.xpath("//a[normalize-space()='Change password']");
     private By oldPass = By.id("OldPassword");
     private By newPass = By.id("NewPassword");
     private By cofNewPass = By.id("ConfirmNewPassword");
 
     private By changePassBtn = By.xpath("//button[normalize-space()='Change password']");
-
-
 
 
     public P05_changePassword userClickChangePass() {

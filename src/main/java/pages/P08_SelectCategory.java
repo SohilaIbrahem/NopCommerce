@@ -22,7 +22,6 @@ public class P08_SelectCategory {
     public P08_SelectCategory UserHeaderMenu(WebDriver driver) {
         this.driver=driver;
         this.action = new Actions(driver);
-         driver.findElement(this.headerMenu).build().perform();
         return this;
     }
 
